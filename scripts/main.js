@@ -1,17 +1,36 @@
-window.addEventListener('load', main);
+
+//Imports
+import data from './utter_data.js'
+
+let colorElement1 = document.getElementById("c1");
+let colorElement2 = document.getElementById("c2");
 
 function main() {
-    console.log('Page is fully loaded');
+    console.log('Main function has started');
 }
-let c1;
-let c2;
+window.addEventListener('load', main);
+colorElement1.addEventListener('click', onClickColor1);
+colorElement1.addEventListener('touch', onClickColor1);
+colorElement2.addEventListener('click', onClickColor2);
+colorElement2.addEventListener('touch', onClickColor2);
+
 
 async function onClickColor1() {
-    let utterance = new SpeechSynthesisUtterance("You Clicked Red");
-    speechSynthesis.speak(utterance);
+
+    data.forEach(function(value){
+        document.getElementById("c1").innerHTML = value.c1_message;
+        let utterance = new SpeechSynthesisUtterance(value.c1_message);
+        speechSynthesis.speak(utterance);
+    });
+   
 }
 
 async function onClickColor2() {
-    let utterance = new SpeechSynthesisUtterance("You clicked green");
-            speechSynthesis.speak(utterance);
+
+    data.forEach(function(value){
+        document.getElementById("c2").innerHTML = value.c2_message;
+        let utterance = new SpeechSynthesisUtterance(value.c2_message);
+        speechSynthesis.speak(utterance);
+    });
+
 }
