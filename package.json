@@ -1,0 +1,19 @@
+{
+  "name": "talk2-group06",
+  "version": "1.0.0",
+  "description": "Talk2App",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaiGorla/Talk-2-group-6"
+  },
+  "author": "Sumanth Reddy Naidu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaiGorla/Talk-2-group-6/issues"
+  },
+  "homepage": "https://github.com/SaiGorla/Talk-2-group-6/blob/main/README.md"
+}
